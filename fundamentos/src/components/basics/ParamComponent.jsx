@@ -11,7 +11,7 @@ export default function ParamComponent(props) {
         <div>
             <h2>{props.title}</h2>
             <h3>{props.subtitle}</h3>
-            <p>Visit my repository profile in <a onClick={openRepo} href="#">GitHub</a>. </p>
+            <p>Visit my repository profile in <a href="#" onClick={openRepo}>GitHub</a>. </p>
         </div>
     )
 }
