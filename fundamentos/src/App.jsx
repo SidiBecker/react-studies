@@ -7,12 +7,22 @@ import Random from "./components/basics/Random";
 import Card from "./components/layout/Card";
 import Family from "./components/basics/Family";
 import Child from "./components/basics/Child";
+import StudentList from "./components/loop/StudentList";
+import ProductList from "./components/loop/ProductList";
 
 export default () => (
   <div id="app" className="app">
     <h1>Fundamentos React</h1>
 
     <div className="cards">
+      <Card title="#07 - Product List">
+        <ProductList></ProductList>
+      </Card>
+
+      <Card title="#06 - Loop">
+        <StudentList></StudentList>
+      </Card>
+
       <Card title="#05 - Component with children" color="darkred">
         <Family sobrenome="Fulano">
           <Child nome="Sidnei"></Child>
