@@ -11,19 +11,25 @@ import StudentList from "./components/loop/StudentList";
 import ProductList from "./components/loop/ProductList";
 import ParOuImpar from "./components/condicional/ParOuImpar";
 import UsuarioInfo from "./components/condicional/UsuarioInfo";
+import DiretaPai from "./components/comunicacao/DiretaPai";
+import IndiretaPai from "./components/comunicacao/IndiretaPai";
 
 export default () => (
   <div id="app" className="app">
     <h1>Fundamentos React</h1>
 
     <div className="cards">
-      <Card title="#09 - Usuário Info">
+      <Card title="#10 - Comunicação indireta">
+        <IndiretaPai></IndiretaPai>
+      </Card>
+      <Card title="#09 - Comunicação direta">
+        <DiretaPai></DiretaPai>
+      </Card>
+      <Card title="#08 - Renderização Condicional">
+        <ParOuImpar value={[20, 23, 21]}></ParOuImpar>
         <UsuarioInfo user={{ name: "SidiBecker" }}></UsuarioInfo>
         <UsuarioInfo user={{ name: "Teste" }}></UsuarioInfo>
         <UsuarioInfo user={{ email: "SidiBecker@gmail" }}></UsuarioInfo>
-      </Card>
-      <Card title="#08 - Renderização Condicional">
-        <ParOuImpar value={[20, 23, 76, 13, 9, 7, 21]}></ParOuImpar>
       </Card>
       <Card title="#07 - Product List">
         <ProductList></ProductList>
