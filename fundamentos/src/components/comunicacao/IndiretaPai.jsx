@@ -1,18 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import IndiretaFilho from "./IndiretaFilho";
 
 export default function IndiretaPai() {
-  //name age bool
+  const [name, setName] = useState("?");
+  const [age, setAge] = useState(0);
+  const [bool, setBool] = useState(false);
 
-  let name = "?";
-  let age = 0;
-  let bool = false;
-
-  const fornecerInfos = (nameParam, ageParam, boolParam) => {
-    console.log(name, age, bool);
-    name = nameParam;
-    age = ageParam;
-    bool = boolParam;
+  const fornecerInfos = (name, age, bool) => {
+    setName(name);
+    setAge(age);
+    setBool(bool);
   };
 
   return (

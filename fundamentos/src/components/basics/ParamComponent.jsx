@@ -1,8 +1,6 @@
 import React from "react"; //Import to use JSX
 
 export default function ParamComponent(props) {
-  console.log(props);
-
   function openRepo() {
     window.open(`https://github.com/${props.username}`, "_target");
   }
@@ -12,11 +10,11 @@ export default function ParamComponent(props) {
       <h2>{props.title}</h2>
       <h3>{props.subtitle}</h3>
       <p>
-        Visit my repository profile in{" "}
-        <a href="#" onClick={openRepo}>
+        Visit my repository profile on{" "}
+        <a href="#h" onClick={openRepo}>
           GitHub
         </a>
-        .{" "}
+        .
       </p>
     </div>
   );
