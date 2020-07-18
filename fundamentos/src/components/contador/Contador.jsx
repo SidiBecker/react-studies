@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+import Display from "./Display";
+import PassoForm from "./PassoForm";
+import Botoes from "./Botoes";
+import "./contador.css";
 
 export default class Contador extends Component {
   state = {
@@ -20,29 +24,20 @@ export default class Contador extends Component {
 
   setPasso = (e) => {
     const value = e.target.value;
-
-    if(this.state.passo === 0){}
-
-    this.setState({
-      passo: value ? parseInt(e.target.value) : 0,
-    });
+    debugger;
+    if (value.length <= 3) {
+      this.setState({
+        passo: value ? parseInt(value) : 0,
+      });
+    }
   };
 
   render() {
     return (
-      <div>
-        <p>Passo:{this.state.passo}</p>
-        <div>
-          <label htmlFor={`inputPasso${this.state.passo}`}></label>
-          <input
-            id={`inputPasso${this.state.passo}`}
-            value={this.state.passo}
-            onChange={this.setPasso}
-          />
-        </div>
-        <p>Valor:{this.state.numero}</p>
-        <button onClick={this.increment}>+</button>
-        <button onClick={this.decrement}>-</button>
+      <div className="contador">
+        <PassoForm passo={this.state.passo} setPasso={this.setPasso} />
+        <Display numero={this.state.numero} />
+        <Botoes onIncrement={this.increment} onDecrement={this.decrement} />
         <hr></hr>
       </div>
     );

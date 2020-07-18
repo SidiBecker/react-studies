@@ -3,7 +3,6 @@ import React from "react";
 export default (props) => {
   const getLines = () => {
     return props.value.map((value, index) => {
-      debugger
       const par = value % 2 === 0;
       return (
         <div key={index}>
