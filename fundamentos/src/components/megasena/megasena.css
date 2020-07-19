@@ -1,0 +1,35 @@
+.megasena {
+    max-width: 300px;
+}
+
+.megasena label {
+    font-size: 18px;
+}
+
+.megasena input {
+    width: 35px;
+    margin-left: 10px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.megasena .numbers {
+    font-size: 20px;
+    word-wrap: break-word;
+    font-weight: 100;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.megasena button {
+    color: white;
+    background-color: rgb(32, 178, 170);
+    border-radius: 5px;
+    font-size: 15px;
+    height: 25px;
+    border: 0;
+    margin: 2px;
+}
+
+.megasena button[disabled] {
+    background-color: #999;
+}

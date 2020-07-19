@@ -1,24 +1,25 @@
 import React, { useState } from "react";
+import "./megasena.css";
+import If, { Else } from "./../condicional/If";
 
 export default (props) => {
-  const [numeros, setNumeros] = useState([]);
-  const [quantidade, setQuantidade] = useState(6);
+  const [numbers, setNumbers] = useState([]);
+  const [amount, setAmount] = useState(6);
 
-  function gerarNumeros(qtde) {
-    var numeros = [];
+  function gerarNumbers(qtde) {
+    var numbers = [];
 
-    while (numeros.length < qtde) {
-      let numeroGerado = getRandomNumber(1, 100);
-      console.log("numero gerado: " + numeroGerado);
+    while (numbers.length < qtde) {
+      let randomNumber = getRandomNumber(1, 100);
 
-      while (numeros.includes(numeroGerado)) {
-        numeroGerado = getRandomNumber(1, 100);
+      while (numbers.includes(randomNumber)) {
+        randomNumber = getRandomNumber(1, 100);
       }
 
-      numeros.push(numeroGerado);
+      numbers.push(randomNumber);
     }
 
-    return setNumeros(numeros);
+    return setNumbers(numbers.sort((a, b) => a - b));
   }
 
   function getRandomNumber(min, max) {
@@ -27,24 +28,44 @@ export default (props) => {
     return Math.floor(Math.random() * (max - min)) + min;
   }
 
-  function play() {
-    gerarNumeros(1);
-  }
+  const clear = () => {
+    setNumbers([]);
+  };
+
+  const onKeyPress = (evt) => {
+    debugger;
+
+    evt.preventDefault();
+  };
 
   return (
-    <div>
+    <div className="megasena">
       <div>
-        <label htmlFor={`inputQuantidade`}>Quantidade:</label>
+        <label htmlFor={`inputAmount`}>Quantidade:</label>
         <input
-          id={"inputQuantidade"}
-          value={quantidade}
-          onChange={(e) => setQuantidade(e.target.value)}
+          onKeyDown={onKeyPress}
+          id={"inputAmount"}
+          value={amount}
+          onChange={(e) => {
+            setAmount(e.target.value);
+            gerarNumbers(amount);
+          }}
           type="number"
+          min="4"
+          max="20"
         />
       </div>
-      <button onClick={(_) => gerarNumeros(quantidade)}>Gerar Números</button>
+      <button onClick={(_) => gerarNumbers(amount)}>Gerar Números</button>
+      <button disabled={numbers.length === 0} onClick={clear}>
+        Limpar
+      </button>
       <div>
-        <span>{numeros.sort((a, b) => a - b).toString()}</span>
+        <If value={numbers.length > 1}>
+          <div className="numbers">{numbers.join(" ")}</div>
+          <Else>
+            <div></div>
+          </Else>
+        </If>
       </div>
     </div>
   );
