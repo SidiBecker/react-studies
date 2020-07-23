@@ -15,15 +15,14 @@ import DiretaPai from "./components/comunicacao/DiretaPai";
 import IndiretaPai from "./components/comunicacao/IndiretaPai";
 import Input from "./components/formulario/Input";
 import Contador from "./components/contador/Contador";
-import Megasena from './components/megasena/Megasena'
+import Megasena from "./components/megasena/Megasena";
 
 export default () => (
   <div id="app" className="app">
     <h1>Fundamentos React</h1>
 
     <div className="cards">
-
-    <Card title="#13 - Megasena">
+      <Card title="#13 - Megasena">
         <Megasena></Megasena>
       </Card>
       <Card title="#12 - Contador">
@@ -31,20 +30,19 @@ export default () => (
         <Contador numeroInicial={176} passo={13}></Contador>
       </Card>
 
-      
-      <Card title="#11 - Componente Controlado (Input)">
+      <Card title="#11 - Componente Controlado (Input)" color="#512D38">
         <Input></Input>
       </Card>
 
-      <Card title="#10 - Comunicação indireta">
+      <Card title="#10 - Comunicação indireta" color="#D5BF86">
         <IndiretaPai></IndiretaPai>
       </Card>
 
-      <Card title="#09 - Comunicação direta">
+      <Card title="#09 - Comunicação direta" color="#A71D31">
         <DiretaPai></DiretaPai>
       </Card>
 
-      <Card title="#08 - Renderização Condicional">
+      <Card title="#08 - Renderização Condicional" color="#A39A92">
         <ParOuImpar value={[20, 23, 21]}></ParOuImpar>
         <UsuarioInfo user={{ name: "SidiBecker" }}></UsuarioInfo>
         <UsuarioInfo user={{ name: "Teste" }}></UsuarioInfo>
@@ -55,11 +53,11 @@ export default () => (
         <ProductList></ProductList>
       </Card>
 
-      <Card title="#06 - Loop">
+      <Card title="#06 - Loop" color="#058ED9">
         <StudentList></StudentList>
       </Card>
 
-      <Card title="#05 - Component with children" color="darkred">
+      <Card title="#05 - Component with children" color="#F3DFA2">
         <Family sobrenome="Fulano">
           <Child nome="Sidnei"></Child>
           <Child nome="Fulano" sobrenome="Silva"></Child>
@@ -67,7 +65,7 @@ export default () => (
         </Family>
       </Card>
 
-      <Card title="#04 - Random" color="darkred">
+      <Card title="#04 - Random" color="#7EBDC2">
         <Random min="2" max="5" />
       </Card>
 
@@ -75,7 +73,7 @@ export default () => (
         <Fragment />
       </Card>
 
-      <Card title="#02 - Parameter component" color="gray">
+      <Card title="#02 - Parameter component" color="#BB4430">
         <ParamComponent
           title="Nice Component"
           subtitle="Awesome!"
@@ -83,7 +81,7 @@ export default () => (
         />
       </Card>
 
-      <Card title="#01 - First component">
+      <Card title="#01 - First component" color="#231F20">
         <First />
       </Card>
     </div>
