@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Calculator from './main/Calculator'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <div>
+      <h1 style={{ color: "#f0f0f0", textAlign: 'center' }}>Calculadora</h1>
+      <Calculator />
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );
