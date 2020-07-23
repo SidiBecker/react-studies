@@ -1,0 +1,22 @@
+.contador div {
+    padding: 0px;
+}
+
+.contador p {
+    margin: 5px;
+}
+
+.contador button {
+    color: white;
+    background-color: rgb(32, 178, 170);
+    border-radius: 50%;
+    height: 25px;
+    border: 0;
+    width: 25px;
+    margin: 2px;
+}
+
+.contador input {
+    width: 40px;
+    margin-left: 5px;
+}

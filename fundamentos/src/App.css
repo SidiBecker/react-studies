@@ -1,0 +1,13 @@
+.app .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.app button {
+    cursor: pointer;
+}
+
+.app button[disabled] {
+    cursor: default;
+}
