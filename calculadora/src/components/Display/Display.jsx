@@ -1,6 +1,10 @@
-import React from "react";
-import "./display.scss";
+import React from 'react';
+import './display.scss';
 
 export default (props) => {
-  return <div className="display">{props.value}</div>;
+  return (
+    <div className="display">
+      <span>{props.value}</span>
+    </div>
+  );
 };

@@ -54,8 +54,6 @@ export default class Calculator extends Component {
         clearDisplay: !equals,
         values
       })
-
-
     }
   }
 
@@ -83,7 +81,6 @@ export default class Calculator extends Component {
       const [values] = [this.state.values];
       values[index] = newValue;
       this.setState({ values });
-      console.log(values);
     }
   };
 
