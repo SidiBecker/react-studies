@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-studies/calculadora/static/css/main.c8c49516.chunk.css",
+    "main.js": "/react-studies/calculadora/static/js/main.65417cee.chunk.js",
+    "main.js.map": "/react-studies/calculadora/static/js/main.65417cee.chunk.js.map",
+    "runtime-main.js": "/react-studies/calculadora/static/js/runtime-main.d2408e4c.js",
+    "runtime-main.js.map": "/react-studies/calculadora/static/js/runtime-main.d2408e4c.js.map",
+    "static/js/2.8dddd1a4.chunk.js": "/react-studies/calculadora/static/js/2.8dddd1a4.chunk.js",
+    "static/js/2.8dddd1a4.chunk.js.map": "/react-studies/calculadora/static/js/2.8dddd1a4.chunk.js.map",
+    "index.html": "/react-studies/calculadora/index.html",
+    "precache-manifest.9f0df88bc0390cbfdf7af6f287eff376.js": "/react-studies/calculadora/precache-manifest.9f0df88bc0390cbfdf7af6f287eff376.js",
+    "service-worker.js": "/react-studies/calculadora/service-worker.js",
+    "static/css/main.c8c49516.chunk.css.map": "/react-studies/calculadora/static/css/main.c8c49516.chunk.css.map",
+    "static/js/2.8dddd1a4.chunk.js.LICENSE.txt": "/react-studies/calculadora/static/js/2.8dddd1a4.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/react-studies/calculadora/static/media/Roboto-Thin.321de678.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d2408e4c.js",
+    "static/js/2.8dddd1a4.chunk.js",
+    "static/css/main.c8c49516.chunk.css",
+    "static/js/main.65417cee.chunk.js"
+  ]
+}
