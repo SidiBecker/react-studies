@@ -37,7 +37,7 @@ const UseEffect = (props) => {
 
         <input
           value={number}
-          onChange={(e) => setNumber(parseInt(e.target.value))}
+          onChange={(e) => setNumber(parseInt(e.target.value || 0))}
           type="number"
           className="input"
         />
